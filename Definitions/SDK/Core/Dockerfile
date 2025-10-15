@@ -28,30 +28,36 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
-        git=1:2.43.0-1ubuntu7.2 \
+        git=1:2.51.0-1ubuntu1 \
         git-flow=1.12.3-3 \
-        cmake=3.28.3-1build7 \
-        ninja-build=1.11.1-2 \
-        ccache=4.9.1-1 \
-        build-essential=12.10ubuntu1 \
-        llvm=1:18.0-59~exp2 \
-        clang=1:18.0-59~exp2 \
-        clang-format=1:18.0-59~exp2 \
-        clang-tidy=1:18.0-59~exp2 \
-        clang-tools=1:18.0-59~exp2 \
-        lld=1:18.0-59~exp2 \
-        llvm-19=1:19.1.1-1ubuntu1~24.04.2 \
-        clang-19=1:19.1.1-1ubuntu1~24.04.2 \
-        clang-format-19=1:19.1.1-1ubuntu1~24.04.2 \
-        clang-tidy-19=1:19.1.1-1ubuntu1~24.04.2 \
-        clang-tools-19=1:19.1.1-1ubuntu1~24.04.2 \
-        lld-19=1:19.1.1-1ubuntu1~24.04.2 \
-        doxygen=1.9.8+ds-2build5 \
-        doxygen-latex=1.9.8+ds-2build5 \
-        graphviz=2.42.2-9ubuntu0.1 \
-        intel-oneapi-common-licensing-2025.1=2025.1.0-359 \
-        intel-oneapi-dpcpp-cpp-2025.1=2025.1.1-10 \
-        libssl-dev=3.0.13-0ubuntu3.5 \
+        cmake=3.31.6-2ubuntu6 \
+        ninja-build=1.12.1-1 \
+        ccache=4.11.2-2 \
+        build-essential=12.12ubuntu1 \
+        llvm=1:20.0-63ubuntu1 \
+        clang=1:20.0-63ubuntu1 \
+        clang-format=1:20.0-63ubuntu1 \
+        clang-tidy=1:20.0-63ubuntu1 \
+        clang-tools=1:20.0-63ubuntu1 \
+        lld=1:20.0-63ubuntu1 \
+        llvm-20=1:20.1.8-0ubuntu4 \
+        clang-20=1:20.1.8-0ubuntu4 \
+        clang-format-20=1:20.1.8-0ubuntu4 \
+        clang-tidy-20=1:20.1.8-0ubuntu4 \
+        clang-tools-20=1:20.1.8-0ubuntu4 \
+        lld-20=1:20.1.8-0ubuntu4 \
+        llvm-21=1:21.1.2-2ubuntu6 \
+        clang-21=1:21.1.2-2ubuntu6 \
+        clang-format-21=1:21.1.2-2ubuntu6 \
+        clang-tidy-21=1:21.1.2-2ubuntu6 \
+        clang-tools-21=1:21.1.2-2ubuntu6 \
+        lld-21=1:21.1.2-2ubuntu6 \
+        doxygen=1.9.8+ds-2.1build1 \
+        doxygen-latex=1.9.8+ds-2.1build1 \
+        graphviz=2.42.4-3build2 \
+        intel-oneapi-common-licensing-2025.2=2025.2.0-377 \
+        intel-oneapi-dpcpp-cpp-2025.2=2025.2.1-7 \
+        libssl-dev=3.5.3-1ubuntu2 \
  && apt-get autoremove --yes --purge \
  && rm -rf /var/lib/apt/lists/*
 
@@ -68,17 +74,23 @@ RUN apt-mark hold \
         clang-tidy \
         clang-tools \
         lld \
-        llvm-19 \
-        clang-19 \
-        clang-format-19 \
-        clang-tidy-19 \
-        clang-tools-19 \
-        lld-19 \
+        llvm-20 \
+        clang-20 \
+        clang-format-20 \
+        clang-tidy-20 \
+        clang-tools-20 \
+        lld-20 \
+        llvm-21 \
+        clang-21 \
+        clang-format-21 \
+        clang-tidy-21 \
+        clang-tools-21 \
+        lld-21 \
         doxygen \
         doxygen-latex \
         graphviz \
-        intel-oneapi-common-licensing-2025.1 \
-        intel-oneapi-dpcpp-cpp-2025.1 \
+        intel-oneapi-common-licensing-2025.2 \
+        intel-oneapi-dpcpp-cpp-2025.2 \
         libssl-dev
 
 # Upgrade the image with the latest patches
