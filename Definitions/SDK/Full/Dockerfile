@@ -29,7 +29,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
         intel-hpckit-runtime \
-        intel-hpckit=2025.1.2-6 \
+        intel-hpckit=2025.2.1-40 \
  && apt-get autoremove --yes --purge \
  && rm -rf /var/lib/apt/lists/*
 
